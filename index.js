@@ -1,7 +1,7 @@
 const user = require('./user');
 const course = require('./course');
 const exam = require('./exam');
-
+const classes = require('./class');
 const express = require('express');
 const app = express();
 
@@ -17,7 +17,7 @@ app.get('/', (req, res)=>{
 app.use('/user', user);
 app.use('/course', course);
 app.use('/exam', exam);
-
+app.use('/class', classes);
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>
 {
