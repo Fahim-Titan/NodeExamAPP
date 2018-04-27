@@ -1,0 +1,14 @@
+{
+  "name": "examination",
+  "version": "1.0.0",
+  "description": "Backend for Examination Web App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Al Masum Fahim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
