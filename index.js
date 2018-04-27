@@ -2,6 +2,7 @@ const user = require('./user');
 const course = require('./course');
 const exam = require('./exam');
 const classes = require('./class');
+
 const express = require('express');
 const app = express();
 

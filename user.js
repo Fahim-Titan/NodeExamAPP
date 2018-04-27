@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('./db');
+
 
 router.get('/:id', (req, res)=>{
     res.send(`user details for id ${req.params.id}`)
@@ -18,6 +20,9 @@ router.post('/login', (req,res)=>{
 });
 
 router.post('/register', (req, res) => {
+    
+    
+    
     res.send('thanks for registering');
 });
 module.exports = router;
