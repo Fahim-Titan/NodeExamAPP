@@ -1,10 +1,10 @@
 const mongoose = require('./db');
 
-module.exports = function (mongoose) {
-    var ObjectID = mongoose.Types.ObjectId;
+// module.exports = function () {
+    // var ObjectID = mongoose.Types.ObjectId;
 
-    const userSchema = new mongoose.Schema({
-        id: ObjectID,
+    var userSchema = new mongoose.Schema({
+        // id: ObjectID,
         FullName: String,
         Email: String,
         Address: String,
@@ -33,12 +33,14 @@ module.exports = function (mongoose) {
                 ]
             }
         ]
-    })
+    });
 
 
 
 
     var models = {
-        Users : mongoose.model('user', userSchema)
-    }
-}
+        Users : mongoose.model('User', userSchema, "Users")
+    };
+
+    // return models;
+module.exports = models.Users;
