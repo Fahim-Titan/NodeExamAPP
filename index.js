@@ -1,11 +1,20 @@
+const mongoose = require('mongoose');
+const Joi = require('joi');
+const express = require('express');
+const app = express();
+
+
+
+
 const user = require('./user');
 const course = require('./course');
 const exam = require('./exam');
 const classes = require('./class');
 
-const express = require('express');
-const app = express();
 
+mongoose.connect('mongodb://localhost/ExaminationDB')
+    .then(console.log('connected to MongoDB'))
+    .catch((err) => console.error('Could not connect to mongo DB' + err.message));
 app.use(express.json());
 
 
@@ -19,6 +28,8 @@ app.use('/user', user);
 app.use('/course', course);
 app.use('/exam', exam);
 app.use('/class', classes);
+
+
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>
 {
