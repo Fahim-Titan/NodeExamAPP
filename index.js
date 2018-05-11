@@ -6,10 +6,10 @@ const app = express();
 
 
 
-const user = require('./user');
-const course = require('./course');
-const exam = require('./exam');
-const classes = require('./class');
+const user = require('./routes/user');
+const course = require('./routes/course');
+const exam = require('./routes/exam');
+const classes = require('./routes/class');
 
 
 mongoose.connect('mongodb://localhost/ExaminationDB')
